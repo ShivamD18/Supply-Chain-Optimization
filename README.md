@@ -1,46 +1,35 @@
-```markdown
-# Supply Chain Optimization & Demand Forecasting
+# Supply Chain Optimization & Logistics Intelligence Platform
 
-An end-to-end supply chain analytics project combining demand forecasting, inventory optimization, supplier allocation, and business intelligence.
+An end-to-end analytics engine and interactive operational control tower designed to forecast lead-time variability, automate inventory replenishment policies (Dynamic Safety Stock & ROP), and generate executive master data reports.
 
-## Project Objective
+---
 
-The objective of this project is to develop a data-driven supply chain decision system capable of:
+## 🏗️ Architecture & Core Modules
 
-- Forecasting future product demand
-- Evaluating forecast accuracy
-- Determining inventory requirements
-- Calculating safety stock and reorder points
-- Optimizing replenishment quantities
-- Evaluating supplier allocation strategies
-- Quantifying inventory and procurement costs
-- Visualizing operational KPIs through an interactive dashboard
+1. **Data Ingestion & Pipeline (`src/data/`)**: Automated extraction, transformation, and schema validation for SKU master data and purchase order logistics streams.
+2. **Predictive Modeling (`src/models/`)**: 
+   - **Lead-Time Regression**: Random Forest models forecasting transit variance and supplier delivery durations.
+   - **Shipment Delay Classification**: Risk modeling identifying probability of operational bottlenecks.
+   - **Dynamic Inventory Engine**: Computes stochastic Reorder Points ($ROP$) and Safety Stock ($SS = Z \times \sigma_L \times D$) to optimize working capital.
+3. **Interactive Control Tower (`dashboard/app.py`)**: Real-time Streamlit dashboard with dynamic service level tuning, supplier scorecarding, and delay tracking.
+4. **Automated Executive Reporting (`src/reports/`)**: Automated generation of stylized, multi-tab Excel workbooks (`openpyxl`) for supplier evaluation and exception management.
 
-## Technologies
+---
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- SciPy
-- Matplotlib
-- Seaborn
-- Excel
-- Power BI
+## 🚀 Quickstart
 
-## Project Status
+```powershell
+# 1. Activate Environment
+.venv\Scripts\Activate.ps1
 
-In Development
+# 2. Run Data Pipeline & Optimization Engine
+python src/data/generate_supply_chain_data.py
+python src/data/load_and_validate.py
+python src/models/train_lead_time_model.py
+python src/models/inventory_optimization.py
 
-### Planned Components
+# 3. Generate Executive Excel Report
+python src/reports/generate_executive_report.py
 
-1. Data collection and preprocessing
-2. Exploratory data analysis
-3. Demand forecasting
-4. Forecast evaluation
-5. Inventory optimization
-6. Supplier allocation optimization
-7. Supply chain KPI analysis
-8. Power BI dashboard
-9. Final business recommendations
-```
+# 4. Launch Interactive Dashboard
+python -m streamlit run dashboard/app.py
