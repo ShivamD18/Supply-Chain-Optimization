@@ -73,4 +73,8 @@ supply-chain-optimization/
 │   └── ESAB_Logistics_Control_Tower.pbit
 ├── reports/                           # Output directory for automated Excel workbooks
 ├── requirements.txt                   # Project dependencies
+<<<<<<< HEAD
 └── README.md
+=======
+└── README.md
+>>>>>>> de0b4261157358995e4ad57d1b070bb0d598bfbf
