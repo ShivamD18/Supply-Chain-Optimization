@@ -4,7 +4,7 @@ An end-to-end data pipeline, predictive modeling engine, and interactive control
 
 ---
 
-## 🏗️ Architecture & Core Modules
+## Architecture & Core Modules
 
 The system is built on a modular Python architecture, integrating machine learning, operations research, and automated reporting:
 
@@ -22,7 +22,7 @@ The system is built on a modular Python architecture, integrating machine learni
 
 ---
 
-## 🧮 Mathematical Formulations
+## Mathematical Formulations
 
 The optimization engine relies on standard operations research models to dynamically calculate inventory parameters:
 
@@ -48,7 +48,7 @@ Minimizes procurement costs across competing suppliers subject to constraints:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 supply-chain-optimization/
